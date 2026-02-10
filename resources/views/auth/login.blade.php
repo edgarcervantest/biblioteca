@@ -1,7 +1,7 @@
+@extends('layouts.auth')
 
-
-<body class="font-sans bg-gradient-to-br from-blue-50 to-gray-100 min-h-screen flex flex-col">
-    <!-- Header de la página -->
+@section('content')
+<!-- Header de la página -->
     <header class="form-header text-white shadow-lg">
         <div class="container mx-auto px-4 py-6">
             <div class="flex justify-between items-center">
@@ -382,71 +382,4 @@
             </section>
         </div>
     </main>
-
-    <!-- JavaScript solo para funcionalidades básicas de UI -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Función para alternar visibilidad de contraseña
-            function setupPasswordToggle(toggleId, passwordId) {
-                const toggleButton = document.getElementById(toggleId);
-                const passwordInput = document.getElementById(passwordId);
-                
-                if (toggleButton && passwordInput) {
-                    toggleButton.addEventListener('click', function() {
-                        const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-                        passwordInput.setAttribute('type', type);
-                        
-                        // Cambiar icono del botón
-                        const icon = this.querySelector('i');
-                        if (type === 'password') {
-                            icon.classList.remove('fa-eye-slash');
-                            icon.classList.add('fa-eye');
-                        } else {
-                            icon.classList.remove('fa-eye');
-                            icon.classList.add('fa-eye-slash');
-                        }
-                    });
-                }
-            }
-            
-            // Configurar toggles de contraseña para login
-            setupPasswordToggle('toggleLoginPassword', 'loginPassword');
-            
-            // Configurar toggles de contraseña para registro
-            setupPasswordToggle('toggleRegisterPassword', 'registerPassword');
-            setupPasswordToggle('toggleRegisterConfirmPassword', 'registerConfirmPassword');
-            
-            // Desplazamiento suave para enlaces internos
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    const href = this.getAttribute('href');
-                    
-                    if (href !== '#' && href !== '#loginForm' && href !== '#registro') {
-                        e.preventDefault();
-                        
-                        const targetElement = document.querySelector(href);
-                        if (targetElement) {
-                            window.scrollTo({
-                                top: targetElement.offsetTop - 80,
-                                behavior: 'smooth'
-                            });
-                        }
-                    }
-                });
-            });
-            
-            // Prevenir envío de formularios (solo para demostración)
-            document.getElementById('loginForm')?.addEventListener('submit', function(e) {
-                e.preventDefault();
-                alert('Formulario de login enviado (esto es solo una demostración)');
-                // En una aplicación real, aquí enviarías los datos al servidor
-            });
-            
-            document.getElementById('registerForm')?.addEventListener('submit', function(e) {
-                e.preventDefault();
-                alert('Formulario de registro enviado (esto es solo una demostración)');
-                // En una aplicación real, aquí enviarías los datos al servidor
-            });
-        });
-    </script>
-</body>
+    @endsection
