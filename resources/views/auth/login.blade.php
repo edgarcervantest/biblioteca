@@ -32,7 +32,8 @@
                 
                 <div class="form-container">
                     <div class="form-card bg-white rounded-xl p-6 md:p-8">
-                        <form id="loginForm">
+                        <form id="loginForm" action="{{ route('login') }}" method="POST">
+                            @csrf // Token de seguridad requerido por Laravel
                             <!-- Campo Email -->
                             <div class="mb-6">
                                 <label for="loginEmail" class="block text-gray-700 font-medium mb-2">
@@ -167,7 +168,8 @@
                 
                 <div class="form-container">
                     <div class="form-card bg-white rounded-xl p-6 md:p-8">
-                        <form id="registerForm">
+                        <form id="registerForm" action="{{ route('register') }}" method="POST">
+                            @csrf
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                                 <!-- Campo Nombre -->
                                 <div>
@@ -180,8 +182,8 @@
                                         </div>
                                         <input 
                                             type="text" 
-                                            id="registerFirstName" 
-                                            name="firstName"
+                                            id="name" 
+                                            name="name"
                                             required
                                             class="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300"
                                             placeholder="Tu nombre"
@@ -189,7 +191,7 @@
                                     </div>
                                 </div>
                                 
-                                <!-- Campo Apellido -->
+                                <!-- Campo Apellido
                                 <div>
                                     <label for="registerLastName" class="block text-gray-700 font-medium mb-2">
                                         Apellido *
@@ -201,14 +203,14 @@
                                         <input 
                                             type="text" 
                                             id="registerLastName" 
-                                            name="lastName"
+                                            name="name"
                                             required
                                             class="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300"
                                             placeholder="Tu apellido"
                                         >
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             
                             <!-- Campo Email -->
                             <div class="mb-6">
@@ -221,7 +223,7 @@
                                     </div>
                                     <input 
                                         type="email" 
-                                        id="registerEmail" 
+                                        id="email" 
                                         name="email"
                                         required
                                         class="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300"
@@ -242,7 +244,7 @@
                                     </div>
                                     <input 
                                         type="password" 
-                                        id="registerPassword" 
+                                        id="password" 
                                         name="password"
                                         required
                                         class="w-full pl-12 pr-12 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300"
@@ -291,8 +293,8 @@
                                     </div>
                                     <input 
                                         type="password" 
-                                        id="registerConfirmPassword" 
-                                        name="confirmPassword"
+                                        id="password_confirmation" 
+                                        name="password_confirmation"
                                         required
                                         class="w-full pl-12 pr-12 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300"
                                         placeholder="Repite tu contraseña"

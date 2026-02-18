@@ -44,7 +44,7 @@
                     <li><a href="#catalogo" class="text-gray-700 hover:text-blue-600 transition-colors duration-300">Catálogo</a></li>
                     <li><a href="#eventos" class="text-gray-700 hover:text-blue-600 transition-colors duration-300">Eventos</a></li>
                     <li><a href="#servicios" class="text-gray-700 hover:text-blue-600 transition-colors duration-300">Servicios</a></li>
-                    <li><a href="#login" id="login-btn" class="bg-blue-700 text-white px-4 py-2 rounded-md hover:bg-blue-800 transition-colors duration-300"><i class="fas fa-sign-in-alt mr-2"></i>Login</a></li>
+                    <li><a href="{{ route('login') }}" class="bg-blue-700 text-white px-4 py-2 rounded-md hover:bg-blue-800 transition-colors duration-300"><i class="fas fa-sign-in-alt mr-2"></i>Login</a></li>
                 </ul>
             </nav>
 
@@ -61,7 +61,7 @@
                 <li><a href="#catalogo" class="text-gray-700 block py-2 hover:text-blue-600">Catálogo</a></li>
                 <li><a href="#eventos" class="text-gray-700 block py-2 hover:text-blue-600">Eventos</a></li>
                 <li><a href="#servicios" class="text-gray-700 block py-2 hover:text-blue-600">Servicios</a></li>
-                <li><a href="#login" id="mobile-login-btn" class="bg-blue-700 text-white px-4 py-2 rounded-md inline-block hover:bg-blue-800 mt-2"><i class="fas fa-sign-in-alt mr-2"></i>Login</a></li>
+                <li><a href="{{ route ('login') }}" id="mobile-login-btn" class="bg-blue-700 text-white px-4 py-2 rounded-md inline-block hover:bg-blue-800 mt-2"><i class="fas fa-sign-in-alt mr-2"></i>Login</a></li>
             </ul>
         </div>
     </header>
@@ -416,12 +416,12 @@
         // Event listeners para login
         loginBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            showLoginModal();
+            // showLoginModal();
         });
         
         mobileLoginBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            showLoginModal();
+            // showLoginModal();
             // Cerrar menú móvil si está abierto
             mobileMenu.classList.add('hidden');
             const icon = menuToggle.querySelector('i');

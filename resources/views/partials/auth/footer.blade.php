@@ -81,19 +81,6 @@
                     }
                 });
             });
-            
-            // Prevenir envío de formularios (solo para demostración)
-            document.getElementById('loginForm')?.addEventListener('submit', function(e) {
-                e.preventDefault();
-                alert('Formulario de login enviado (esto es solo una demostración)');
-                // En una aplicación real, aquí enviarías los datos al servidor
-            });
-            
-            document.getElementById('registerForm')?.addEventListener('submit', function(e) {
-                e.preventDefault();
-                alert('Formulario de registro enviado (esto es solo una demostración)');
-                // En una aplicación real, aquí enviarías los datos al servidor
-            });
         });
     </script>
 </body>
