@@ -57,4 +57,9 @@ class AuthController extends Controller
         'email' => 'Las credenciales no son correctas'
     ]);
     }
+
+    public function logout(){
+        auth()->logout();
+        return redirect()->route('login');
+    }
 }

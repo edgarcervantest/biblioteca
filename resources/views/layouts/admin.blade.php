@@ -47,7 +47,7 @@
                         <li><a href="#" class="hover:text-indigo-200 transition duration-200 font-medium" data-section="libros">Libros</a></li>
                         <li><a href="{{ route('categorias.index') }}" class="hover:text-indigo-200 transition duration-200 font-medium" data-section="categorias">Categorias</a></li>
                         <li><a href="#" class="hover:text-indigo-200 transition duration-200 font-medium" data-section="prestamos">Préstamos</a></li>
-                        <li><a href="#" class="hover:text-indigo-200 transition duration-200 font-medium" data-section="salir">Salir</a></li>
+                        <li><a href="{{ route('logout') }}" class="hover:text-indigo-200 transition duration-200 font-medium" data-section="salir">Salir</a></li>
                     </ul>
                 </nav>
                 
@@ -92,7 +92,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="flex items-center space-x-3 p-3 rounded-lg hover:bg-indigo-50 text-gray-700 hover:text-indigo-800 transition duration-200" data-section="salir">
+                            <a href="{{ route('logout') }}" class="flex items-center space-x-3 p-3 rounded-lg hover:bg-indigo-50 text-gray-700 hover:text-indigo-800 transition duration-200" data-section="salir">
                                 <i class="fas fa-sign-out-alt w-5"></i>
                                 <span class="font-medium">Salir</span>
                             </a>
@@ -145,8 +145,14 @@
                                 <span class="font-medium">Préstamos</span>
                             </a>
                         </li>
+                                                <li>
+                            <a href="{{ route('categorias.index') }}" class="flex items-center space-x-3 p-3 rounded-lg hover:bg-indigo-50 text-gray-700 hover:text-indigo-800 transition duration-200" data-section="prestamos">
+                                <i class="fas fa-exchange-alt w-5"></i>
+                                <span class="font-medium">Categorias</span>
+                            </a>
+                        </li>
                         <li>
-                            <a href="#" class="flex items-center space-x-3 p-3 rounded-lg hover:bg-indigo-50 text-gray-700 hover:text-indigo-800 transition duration-200" data-section="salir">
+                            <a href="{{ route('logout') }}" class="flex items-center space-x-3 p-3 rounded-lg hover:bg-indigo-50 text-gray-700 hover:text-indigo-800 transition duration-200" data-section="salir">
                                 <i class="fas fa-sign-out-alt w-5"></i>
                                 <span class="font-medium">Salir</span>
                             </a>
@@ -155,10 +161,22 @@
                 </nav>
             </aside>
 
-            @yield('content')
+            <!-- Contenido principal -->
+            <main class="flex-1 overflow-auto">
+                <div class="p-6">
+                    @yield('content')
+                </div>
+            </main>
+            
+        </div>
 
-            @include('partials.admin.footer')
-
+        <!-- Footer -->
+        <footer class="bg-gray-800 text-white py-4 border-t border-gray-700">
+            <div class="px-6">
+                @include('partials.admin.footer')
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
                     
