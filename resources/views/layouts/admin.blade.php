@@ -42,7 +42,7 @@
                 <!-- Menú principal (oculto en móviles) -->
                 <nav class="hidden md:block">
                     <ul class="flex space-x-6">
-                        <li><a href="#" class="hover:text-indigo-200 transition duration-200 font-medium" data-section="inicio">Inicio</a></li>
+                        <li><a href="{{ route('home') }}" class="hover:text-indigo-200 transition duration-200 font-medium" data-section="inicio">Inicio</a></li>
                         <li><a href="#" class="hover:text-indigo-200 transition duration-200 font-medium" data-section="usuarios">Usuarios</a></li>
                         <li><a href="#" class="hover:text-indigo-200 transition duration-200 font-medium" data-section="libros">Libros</a></li>
                         <li><a href="{{ route('categorias.index') }}" class="hover:text-indigo-200 transition duration-200 font-medium" data-section="categorias">Categorias</a></li>
@@ -74,7 +74,7 @@
                 <nav class="p-4">
                     <ul class="space-y-2">
                         <li>
-                            <a href="#" class="flex items-center space-x-3 p-3 rounded-lg hover:bg-indigo-50 text-indigo-700 hover:text-indigo-800 transition duration-200" data-section="libros">
+                            <a href="{{ route('libros.create') }}" class="flex items-center space-x-3 p-3 rounded-lg hover:bg-indigo-50 text-indigo-700 hover:text-indigo-800 transition duration-200" data-section="libros">
                                 <i class="fas fa-book w-5"></i>
                                 <span class="font-medium">Libros</span>
                             </a>
