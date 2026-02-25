@@ -39,7 +39,7 @@
                         </button>
                     </div>
                     <div class="flex items-center space-x-2">
-            
+
                         <h1 class="text-xl md:text-2xl font-bold">Bibli</h1>
                         <i class="fas fa-paperclip text-2xl"></i>
                     </div>
@@ -53,7 +53,8 @@
                                 data-section="inicio">Inicio</a></li>
                         <li><a href="#" class="hover:text-indigo-200 transition duration-200 font-medium"
                                 data-section="usuarios">Usuarios</a></li>
-                        <li><a href="{{ route('libros.index') }}" class="hover:text-indigo-200 transition duration-200 font-medium"
+                        <li><a href="{{ route('libros.index') }}"
+                                class="hover:text-indigo-200 transition duration-200 font-medium"
                                 data-section="libros">Libros</a></li>
                         <li><a href="{{ route('categorias.index') }}"
                                 class="hover:text-indigo-200 transition duration-200 font-medium"
@@ -80,9 +81,9 @@
         </header>
 
         <!-- Contenido principal con sidebar -->
-        <!-- <div class="flex flex-1"> -->
-            <!-- Sidebar para desktop (oculto en móviles)
-            <aside id="sidebar" class="sidebar sidebar-transitio shadow-lg w-64 flex-shrink-0 hidden md:block">
+        <div class="flex flex-1">
+            <!-- Sidebar para desktop (oculto en móviles) -->
+            <aside id="sidebar" class="sidebar sidebar-transitio w-64 flex-shrink-0 hidden md:block">
                 <div class="p-5 border-b">
                     <h2 class="title_text">Menú de Administración</h2>
                 </div>
@@ -90,16 +91,14 @@
                     <ul class="space-y-2">
                         <li>
                             <a href="{{ route('home') }}"
-                                class="sidebar_text flex items-center space-x-3 p-3 rounded-lg"
-                                data-section="libros">
+                                class="sidebar_text flex items-center space-x-3 p-3 rounded-lg" data-section="libros">
                                 <i class="fas fa-home w-5"></i>
                                 <span class="font-medium">Inicio</span>
                             </a>
                         </li>
                         <li>
                             <a href="{{ route('libros.index') }}"
-                                class="sidebar_text flex items-center space-x-3 p-3 rounded-lg"
-                                data-section="libros">
+                                class="sidebar_text flex items-center space-x-3 p-3 rounded-lg" data-section="libros">
                                 <i class="fas fa-book w-5"></i>
                                 <span class="font-medium">Libros</span>
                             </a>
@@ -113,8 +112,7 @@
                             </a>
                         </li>
 
-                        <a href="#"
-                            class="sidebar_text flex items-center space-x-3 p-3 rounded-lg"
+                        <a href="#" class="sidebar_text flex items-center space-x-3 p-3 rounded-lg"
                             data-section="prestamos">
                             <i class="fas fa-exchange-alt w-5"></i>
                             <span class="font-medium">Préstamos</span>
@@ -122,32 +120,32 @@
                         </li>
                         <li>
                             <a href="{{ route('logout') }}"
-                                class="sidebar_text flex items-center space-x-3 p-3 rounded-lg"
-                                data-section="salir">
+                                class="sidebar_text flex items-center space-x-3 p-3 rounded-lg" data-section="salir">
                                 <i class="fas fa-sign-out-alt w-5"></i>
                                 <span class="font-medium">Salir</span>
                             </a>
                         </li>
                     </ul>
 
-                    Información de biblioteca
-                    <div class="grey_card">
-                        <h3 class="font-medium text-indigo-800 mb-2">Resumen Biblioteca</h3>
+                    <!-- Información de biblioteca -->
+                    <div class="grey_card container mx-auto px-4 py-8">
+                        <h3 class="content_text mb-2 font-bold">Resumen de bibli</h3>
                         <div class="space-y-1 text-sm">
                             <div class="flex justify-between">
-                                <span class="text-gray-600">Libros totales:</span>
-                                <span class="font-medium">1,245</span>
+                                <span class="content_text font-bold">Libros totales:</span>
+                                <span class="content_text">1,245</span>
                             </div>
                             <div class="flex justify-between">
-                                <span class="text-gray-600">Préstamos activos:</span>
-                                <span class="font-medium">87</span>
+                                <span class="content_text font-bold">Préstamos activos:</span>
+                                <span class="content_text">87</span>
                             </div>
                             <div class="flex justify-between">
-                                <span class="text-gray-600">Usuarios registrados:</span>
-                                <span class="font-medium">342</span>
+                                <span class="content_text font-bold">Usuarios:</span>
+                                <span class="content_text">342</span>
                             </div>
                         </div>
                     </div>
+            
                 </nav>
             </aside>
 
@@ -168,16 +166,14 @@
                     <ul class="space-y-2">
                         <li>
                             <a href="{{ route('home') }}"
-                                class="sidebar_text flex items-center space-x-3 p-3 rounded-lg"
-                                data-section="inicio">
+                                class="sidebar_text flex items-center space-x-3 p-3 rounded-lg" data-section="inicio">
                                 <i class="fas fa-home-alt w-5"></i>
                                 <span class="font-medium">Inicio</span>
                             </a>
                         </li>
                         <li>
                             <a href="{{ route('libros.index') }}"
-                                class="sidebar_text flex items-center space-x-3 p-3 rounded-lg"
-                                data-section="libros">
+                                class="sidebar_text flex items-center space-x-3 p-3 rounded-lg" data-section="libros">
                                 <i class="fas fa-book w-5"></i>
                                 <span class="font-medium">Libros</span>
                             </a>
@@ -191,8 +187,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#"
-                                class="sidebar_text flex items-center space-x-3 p-3 rounded-lg"
+                            <a href="#" class="sidebar_text flex items-center space-x-3 p-3 rounded-lg"
                                 data-section="prestamos">
                                 <i class="fas fa-exchange-alt w-5"></i>
                                 <span class="font-medium">Préstamos</span>
@@ -200,8 +195,7 @@
                         </li>
                         <li>
                             <a href="{{ route('logout') }}"
-                                class="sidebar_text flex items-center space-x-3 p-3 rounded-lg"
-                                data-section="salir">
+                                class="sidebar_text flex items-center space-x-3 p-3 rounded-lg" data-section="salir">
                                 <i class="fas fa-sign-out-alt w-5"></i>
                                 <span class="font-medium">Salir</span>
                             </a>
@@ -259,7 +253,5 @@
             }
         });
     </script>
-
 </body>
-
 </html>

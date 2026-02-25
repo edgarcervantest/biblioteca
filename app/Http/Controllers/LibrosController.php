@@ -65,4 +65,10 @@ class LibrosController extends Controller
         $categorias = Categoria::all();
         return view('libros.edit', compact('libro','categorias'));
     }
+
+    public function destroy($id){
+        $libro = Libro::findOrFail($id);
+        $libro->delete();
+        return redirect()->route('libros.index')->with('success','Libro eliminado');
+    }
 }

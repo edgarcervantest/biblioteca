@@ -50,8 +50,8 @@
                             <td class="content_text px-4 py-2 border-b-2">{{$libro->nombre}}</td>
                             <td class="content_text px-4 py-2 border-b-2">
                                 <a href="{{ route('libros.edit', $libro->id) }}"
-                                    class="action_button">Editar</a>
-                                <form action="#" method="POST" class="inline-block">
+                                    class="purple_button">Editar</a>
+                                <form action="{{ route('libros.destroy', $libro->id) }}" method="POST" class="inline-block">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit"

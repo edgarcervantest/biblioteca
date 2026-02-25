@@ -104,17 +104,17 @@
                         Acciones Rápidas
                     </h4>
                     <ul class="space-y-2">
-                        <li><a href="{{ route('libros.create') }}"
-                                class="card_text flex items-center" data-section="libros"><i
-                                    class="fas fa-plus-circle text-sm mr-2"></i> Agregar nuevo libro</a></li>
-                        <li><a href="#" class="card_text flex items-center"
-                                data-section="usuarios"><i class="fas fa-user-plus text-sm mr-2"></i> Registrar nuevo
+                        <li><a href="{{ route('libros.create') }}" class="card_text flex items-center"
+                                data-section="libros"><i class="fas fa-plus-circle text-sm mr-2"></i> Agregar nuevo
+                                libro</a></li>
+                        <li><a href="#" class="card_text flex items-center" data-section="usuarios"><i
+                                    class="fas fa-user-plus text-sm mr-2"></i> Registrar nuevo
                                 usuario</a></li>
-                        <li><a href="#" class="card_text flex items-center"
-                                data-section="prestamos"><i class="fas fa-handshake text-sm mr-2"></i> Registrar
+                        <li><a href="#" class="card_text flex items-center" data-section="prestamos"><i
+                                    class="fas fa-handshake text-sm mr-2"></i> Registrar
                                 préstamo</a></li>
-                        <li><a href="#" class="card_text flex items-center"
-                                data-section="prestamos"><i class="fas fa-undo-alt text-sm mr-2"></i> Registrar
+                        <li><a href="#" class="card_text flex items-center" data-section="prestamos"><i
+                                    class="fas fa-undo-alt text-sm mr-2"></i> Registrar
                                 devolución</a></li>
                     </ul>
                 </div>
@@ -190,10 +190,12 @@
                                     <td class="px-4 py-3">{{ $libro->categoria?->nombre}}</td>
                                     <td class="px-4 py-3">{{ $libro->estado }}</td>
                                     <td class="px-4 py-3">
-                                        <a href="{{ route('libros.edit', $libro->id) }}"
-                                            class="purple_button mr-2">Editar</a>
-                                        <button type="submit"
-                                            class="action_button mr-2">Eliminar</button>
+                                        <a href="{{ route('libros.edit', $libro->id) }}" class="purple_button mr-2">Editar</a>
+                                        <form action="{{ route('libros.destroy', $libro->id) }}" method="POST"
+                                            class="inline-block">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="action_button">Eliminar</button>
                                         </form>
                                     </td>
                                 </tr>
