@@ -49,20 +49,20 @@
                 <nav class="hidden md:block">
                     <ul class="flex space-x-6">
                         <li><a href="{{ route('home') }}"
-                                class="hover:text-indigo-200 transition duration-200 font-medium"
+                                class="hover:text-indigo-200 transition duration-300 font-medium"
                                 data-section="inicio">Inicio</a></li>
-                        <li><a href="#" class="hover:text-indigo-200 transition duration-200 font-medium"
+                        <li><a href="#" class="hover:text-indigo-200 transition duration-300 font-medium"
                                 data-section="usuarios">Usuarios</a></li>
                         <li><a href="{{ route('libros.index') }}"
-                                class="hover:text-indigo-200 transition duration-200 font-medium"
+                                class="hover:text-indigo-200 transition duration-300 font-medium"
                                 data-section="libros">Libros</a></li>
                         <li><a href="{{ route('categorias.index') }}"
-                                class="hover:text-indigo-200 transition duration-200 font-medium"
+                                class="hover:text-indigo-200 transition duration-300 font-medium"
                                 data-section="categorias">Categorias</a></li>
-                        <li><a href="#" class="hover:text-indigo-200 transition duration-200 font-medium"
+                        <li><a href="#" class="hover:text-indigo-200 transition duration-300 font-medium"
                                 data-section="prestamos">Préstamos</a></li>
                         <li><a href="{{ route('logout') }}"
-                                class="hover:text-indigo-200 transition duration-200 font-medium"
+                                class="hover:text-indigo-200 transition duration-300 font-medium"
                                 data-section="salir">Salir</a></li>
                     </ul>
                 </nav>
@@ -83,7 +83,7 @@
         <!-- Contenido principal con sidebar -->
         <div class="flex flex-1">
             <!-- Sidebar para desktop (oculto en móviles) -->
-            <aside id="sidebar" class="sidebar sidebar-transitio w-64 flex-shrink-0 hidden md:block">
+            <aside id="sidebar" class="sidebar sidebar-transitio w-64 shrink-0 hidden md:block">
                 <div class="p-5 border-b">
                     <h2 class="title_text">Menú de Administración</h2>
                 </div>

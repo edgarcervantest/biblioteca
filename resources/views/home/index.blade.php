@@ -15,7 +15,7 @@
                         </a>
                     </li>
                     <li class="inline-flex items-center">
-                        <a href="{{ route('categorias.index') }}" class="breadcrumb_text">
+                        <a href="#" class="breadcrumb_text">
                             <i class="fas fa-chevron-right mr-2"></i>
                             Dashboards
                         </a>
@@ -104,7 +104,7 @@
                         Acciones Rápidas
                     </h4>
                     <ul class="space-y-2">
-                        <li><a href="{{ route('libros.create') }}" class="card_text flex items-center"
+                        <li><a href="{{ route('libros.create') }}" class="card_text flex items-center hover:text-purple-600 transition-colors duration-300"
                                 data-section="libros"><i class="fas fa-plus-circle text-sm mr-2"></i> Agregar nuevo
                                 libro</a></li>
                         <li><a href="#" class="card_text flex items-center" data-section="usuarios"><i

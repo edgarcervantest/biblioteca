@@ -2,17 +2,17 @@
 
 @section('content')
 <!-- Header de la página -->
-    <header class="form-header text-white shadow-lg">
+    <header class="form-header header text-white shadow-lg">
         <div class="container mx-auto px-4 py-6">
             <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-3">
-                    <i class="fas fa-book-open text-3xl"></i>
+                    <i class="fas fa-paperclip text-3xl"></i>
                     <div>
-                        <h1 class="text-2xl font-bold">Biblioteca Central</h1>
+                        <h1 class="text-2xl font-bold">Bibli</h1>
                         <p class="text-blue-100">Acceso a miembros</p>
                     </div>
                 </div>
-                <a href="{{ route('home') }}" class="text-white hover:text-blue-200 transition duration-300">
+                <a href="{{ route('welcome') }}" class="text-white hover:text-blue-200 transition duration-300">
                     <i class="fas fa-home text-xl"></i>
                 </a>
             </div>
@@ -29,19 +29,19 @@
                 <!-- Formulario de Login -->
                 <section>
                     <div class="text-center mb-8">
-                        <h2 class="text-3xl font-bold text-gray-800">Iniciar Sesión</h2>
-                        <p class="text-gray-600 mt-2">Accede a tu cuenta de la biblioteca</p>
+                        <h2 class="text-3xl font-bold title_text">Iniciar sesión</h2>
+                        <p class="content_text mt-2">Accede a tu cuenta de la biblioteca</p>
                     </div>
                     
                     <div class="form-container">
-                        <div class="form-card bg-white rounded-xl p-6 md:p-8">
+                        <div class="form-card grey_card rounded-xl p-6 md:p-8">
                             <form id="loginForm" action="{{ route('login') }}" method="POST">
                                 @csrf 
                                 <!-- Token de seguridad requerido por Laravel -->
                                 <!-- Campo Email -->
                                 <div class="mb-6">
-                                    <label for="loginEmail" class="block text-gray-700 font-medium mb-2">
-                                        Correo Electrónico
+                                    <label for="loginEmail" class="block content_text font-medium mb-2">
+                                        Correo electrónico
                                     </label>
                                     <div class="relative">
                                         <div class="input-icon">
@@ -52,11 +52,10 @@
                                             id="loginEmail" 
                                             name="email"
                                             required
-                                            class="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300"
+                                            class="w-full pl-12 pr-4 py-3 input_text"
                                             placeholder="tucorreo@ejemplo.com"
                                         >
                                     </div>
-                                    <p class="text-sm text-gray-500 mt-1">Ingresa el correo electrónico asociado a tu cuenta.</p>
                                 </div>
                                 
                                 <!-- Campo Contraseña -->
@@ -170,8 +169,8 @@
                         <p class="text-gray-600 mt-2">Regístrate para acceder a todos los servicios de la biblioteca</p>
                     </div>
                     
-                    <div class="form-container">
-                        <div class="form-card bg-white rounded-xl p-6 md:p-8">
+                    <div class="form-container grey_card">
+                        <div class="form-card rounded-xl p-6 md:p-8">
                             <form id="registerForm" action="{{ route('register') }}" method="POST">
                                 @csrf
                                 <!-- Campo Nombre -->
@@ -348,7 +347,7 @@
                         </div>
                         
                         <!-- Información adicional -->
-                        <div class="mt-6 p-4 bg-blue-50 rounded-lg">
+                        <div class="mt-6 p-4 grey_card rounded-lg">
                             <div class="flex items-start">
                                 <i class="fas fa-info-circle text-blue-500 mt-1 mr-3"></i>
                                 <div>
