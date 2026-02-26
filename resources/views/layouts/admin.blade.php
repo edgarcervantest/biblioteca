@@ -111,12 +111,19 @@
                                 <span class="font-medium">Categorias</span>
                             </a>
                         </li>
-
-                        <a href="#" class="sidebar_text flex items-center space-x-3 p-3 rounded-lg"
-                            data-section="prestamos">
-                            <i class="fas fa-exchange-alt w-5"></i>
-                            <span class="font-medium">Préstamos</span>
-                        </a>
+                        <li>
+                            <a href="#" class="sidebar_text flex items-center space-x-3 p-3 rounded-lg"
+                                data-section="prestamos">
+                                <i class="fas fa-user w-5"></i>
+                                <span class="font-medium">Usuarios</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="sidebar_text flex items-center space-x-3 p-3 rounded-lg"
+                                data-section="prestamos">
+                                <i class="fas fa-exchange-alt w-5"></i>
+                                <span class="font-medium">Préstamos</span>
+                            </a>
                         </li>
                         <li>
                             <a href="{{ route('logout') }}"
@@ -145,7 +152,7 @@
                             </div>
                         </div>
                     </div>
-            
+
                 </nav>
             </aside>
 
@@ -254,4 +261,5 @@
         });
     </script>
 </body>
+
 </html>

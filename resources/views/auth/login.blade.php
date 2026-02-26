@@ -20,7 +20,7 @@
     </header>
 
     <!-- Contenido principal -->
-    <main class="flex-grow py-8 md:py-12">
+    <main class="grow py-8 md:py-12">
         <div class="container mx-auto px-4">
             
             <!-- Contenedor de dos columnas para los formularios -->
@@ -110,7 +110,7 @@
                                 <!-- Botón de Enviar -->
                                 <button 
                                     type="submit"
-                                    class="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-3 px-4 rounded-lg transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                                    class="w-full bg-linear-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-3 px-4 rounded-lg transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                                 >
                                     <i class="fas fa-sign-in-alt mr-2"></i>
                                     Iniciar Sesión
@@ -328,7 +328,7 @@
                                 <!-- Botón de Enviar -->
                                 <button 
                                     type="submit"
-                                    class="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-3 px-4 rounded-lg transition duration-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+                                    class="w-full bg-linear-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-3 px-4 rounded-lg transition duration-300 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
                                 >
                                     <i class="fas fa-user-plus mr-2"></i>
                                     Crear Cuenta

@@ -9,8 +9,16 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $libros = Libro::paginate(3);
+        $user = auth()->user();
 
-        return view('home.index', compact('libros'));
+        if ($user->user_type == 'admin') {
+            $libros = Libro::paginate(5);
+
+            return view('home.index', compact('libros'));
+        } else {
+            $libros = Libro::paginate(3);
+
+            return view('users.index', compact('libros'));
+        }
     }
 }
