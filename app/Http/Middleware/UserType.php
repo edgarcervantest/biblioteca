@@ -13,12 +13,11 @@ class UserType
      *
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
-    public function handle(Request $request, Closure $next): Response
+    public function handle(Request $request, Closure $next, string $user_type): Response
     {
-        if ($request->user()->user_type !== $user_type = $request->input("")) {
+        if ($request->user()->user_type !== $user_type) {
             abort(403, "No autorizado");
-
-            return $next($request);
         }
+        return $next($request);
     }
 }
