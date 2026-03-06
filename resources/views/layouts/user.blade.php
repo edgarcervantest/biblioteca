@@ -51,14 +51,6 @@
                         <li><a href="{{ route('home') }}"
                                 class="hover:text-indigo-200 transition duration-300 font-medium"
                                 data-section="inicio">Inicio</a></li>
-                        <li><a href="{{ route('libros.index') }}"
-                                class="hover:text-indigo-200 transition duration-300 font-medium"
-                                data-section="libros">Libros</a></li>
-                        <li><a href="{{ route('categorias.index') }}"
-                                class="hover:text-indigo-200 transition duration-300 font-medium"
-                                data-section="categorias">Categorías</a></li>
-                        <li><a href="#" class="hover:text-indigo-200 transition duration-300 font-medium"
-                                data-section="usuarios">Usuarios</a></li>
                         <li><a href="#" class="hover:text-indigo-200 transition duration-300 font-medium"
                                 data-section="prestamos">Préstamos</a></li>
                         <li><a href="{{ route('logout') }}"
@@ -70,8 +62,8 @@
                 <!-- Perfil de usuario -->
                 <div class="flex items-center space-x-3">
                     <div class="hidden md:flex flex-col text-right">
-                        <span class="font-medium">Admin Bibliotecario</span>
-                        <span class="text-sm text-indigo-200">Administrador</span>
+                        <span class="font-medium">{{ Auth::user()->name }}</span>
+                        <span class="text-sm text-indigo-200 transform capitalize">{{ Auth::user()->user_type }}</span>
                     </div>
                     <div class="w-10 h-10 rounded-full bg-indigo-600 flex items-center justify-center">
                         <i class="fas fa-user"></i>
@@ -96,28 +88,8 @@
                                 <span class="font-medium">Inicio</span>
                             </a>
                         </li>
-                        <li>
-                            <a href="{{ route('libros.index') }}"
-                                class="sidebar_text flex items-center space-x-3 p-3 rounded-lg" data-section="libros">
-                                <i class="fas fa-book w-5"></i>
-                                <span class="font-medium">Libros</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('categorias.index') }}"
-                                class="sidebar_text flex items-center space-x-3 p-3 rounded-lg"
-                                data-section="categorias">
-                                <i class="fas fa-bookmark w-5"></i>
-                                <span class="font-medium">Categorías</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="sidebar_text flex items-center space-x-3 p-3 rounded-lg"
-                                data-section="prestamos">
-                                <i class="fas fa-user w-5"></i>
-                                <span class="font-medium">Usuarios</span>
-                            </a>
-                        </li>
+
+
                         <li>
                             <a href="#" class="sidebar_text flex items-center space-x-3 p-3 rounded-lg"
                                 data-section="prestamos">
@@ -178,34 +150,13 @@
                                 <span class="font-medium">Inicio</span>
                             </a>
                         </li>
-                        <li>
-                            <a href="{{ route('libros.index') }}"
-                                class="sidebar_text flex items-center space-x-3 p-3 rounded-lg" data-section="libros">
-                                <i class="fas fa-book w-5"></i>
-                                <span class="font-medium">Libros</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('categorias.index') }}"
-                                class="sidebar_text flex items-center space-x-3 p-3 rounded-lg"
-                                data-section="prestamos">
-                                <i class="fas fa-bookmark w-5"></i>
-                                <span class="font-medium">Categorías</span>
-                            </a>
-                        </li>
-                        <li>
+
                         <li>
                             <a href="#" class="sidebar_text flex items-center space-x-3 p-3 rounded-lg"
                                 data-section="prestamos">
-                                <i class="fas fa-user w-5"></i>
-                                <span class="font-medium">Usuarios</span>
+                                <i class="fas fa-exchange-alt w-5"></i>
+                                <span class="font-medium">Préstamos</span>
                             </a>
-                        </li>
-                        <a href="#" class="sidebar_text flex items-center space-x-3 p-3 rounded-lg"
-                            data-section="prestamos">
-                            <i class="fas fa-exchange-alt w-5"></i>
-                            <span class="font-medium">Préstamos</span>
-                        </a>
                         </li>
                         <li>
                             <a href="{{ route('logout') }}"

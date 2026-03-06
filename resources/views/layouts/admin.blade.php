@@ -70,8 +70,8 @@
                 <!-- Perfil de usuario -->
                 <div class="flex items-center space-x-3">
                     <div class="hidden md:flex flex-col text-right">
-                        <span class="font-medium">Admin Bibliotecario</span>
-                        <span class="text-sm text-indigo-200">Administrador</span>
+                        <span class="font-medium">{{ auth()->user()->name }}</span>
+                        <span class="text-sm text-indigo-200 transform capitalize">{{ auth()->user()->user_type }}</span>
                     </div>
                     <div class="w-10 h-10 rounded-full bg-indigo-600 flex items-center justify-center">
                         <i class="fas fa-user"></i>
