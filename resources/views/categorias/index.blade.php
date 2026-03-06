@@ -62,5 +62,8 @@
                 </tbody>
             </table>
         </div>
+                    <div class="content-text px-6 py-4 border-t flex items-center justify-between">
+                {{ $categorias->links()}}
+            </div>
     </div>
 @endsection

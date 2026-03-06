@@ -41,6 +41,12 @@ class LibrosController extends Controller
         return redirect()->route('home')->with('success', 'Libro creado exitosamente');
     }
 
+    public function edit($id){
+        $libro = Libro::findOrFail($id);
+        $categorias = Categoria::all();
+        return view('libros.edit', compact('libro','categorias'));
+    }
+
     public function update(Request $request, $id) {
         $request->validate([
             'nombre' => 'required|string|max:255',
@@ -58,12 +64,6 @@ class LibrosController extends Controller
         $libro->save();
 
         return redirect()->route('home')->with('success','Libro actualizado');
-    }
-
-    public function edit($id){
-        $libro = Libro::findOrFail($id);
-        $categorias = Categoria::all();
-        return view('libros.edit', compact('libro','categorias'));
     }
 
     public function destroy($id){

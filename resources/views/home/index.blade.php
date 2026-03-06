@@ -26,7 +26,7 @@
         </div>
 
         <!-- Tarjetas de resumen -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 m-8">
             <div class="grey_card rounded-lg shadow p-5 border-l-4 border-indigo-500">
                 <div class="flex justify-between items-start">
                     <div>
@@ -104,7 +104,8 @@
                         Acciones Rápidas
                     </h4>
                     <ul class="space-y-2">
-                        <li><a href="{{ route('libros.create') }}" class="card_text flex items-center hover:text-purple-600 transition-colors duration-300"
+                        <li><a href="{{ route('libros.create') }}"
+                                class="card_text flex items-center hover:text-purple-600 transition-colors duration-300"
                                 data-section="libros"><i class="fas fa-plus-circle text-sm mr-2"></i> Agregar nuevo
                                 libro</a></li>
                         <li><a href="#" class="card_text flex items-center" data-section="usuarios"><i
@@ -156,11 +157,11 @@
                 </div>
             </div>
 
-            <!-- Préstamos recientes -->
+            <!-- Tabla de libros -->
             <div class="mt-8">
                 <h4 class="font-bold card_text mb-4">Lista de libros</h4>
                 <div class="overflow-x-auto">
-                    <table class="min-w-full divide-y divide-gray-200">
+                    <table class="min-w-full divide-y ">
                         <thead class="grey_card">
                             <tr>
                                 <th class="px-4 py-3 text-left text-xs font-bold card_text uppercase tracking-wider">
@@ -202,11 +203,9 @@
                             @endforeach
                         </tbody>
                     </table>
-
                 </div>
-
             </div>
-            <div class="b">
+            <div class="content-text px-6 py-4 border-t flex items-center justify-between">
                 {{ $libros->links()}}
             </div>
         </div>
