@@ -30,7 +30,7 @@
             </div>
         @endif
 
-        <a href="#"
+        <a href="{{ route('usuarios.create') }}"
             class="purple_button">Agregar usuario</a><br>
         <br><br>
         <div class="grey_card">
@@ -53,7 +53,7 @@
                             <td class="content_text px-4 py-2 border-b-2">{{ $usuario->user_type }}</td>
 
                             <td class="content_text px-4 py-2 border-b-2">
-                                <a href="#"
+                                <a href="{{ route('usuarios.edit', $usuario->id) }}"
                                     class="purple_button">Editar</a>
                                 <form action="#" method="POST" class="inline-block">
                                     @csrf
