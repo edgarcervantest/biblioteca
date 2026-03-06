@@ -57,7 +57,7 @@
                         <li><a href="{{ route('categorias.index') }}"
                                 class="hover:text-indigo-200 transition duration-300 font-medium"
                                 data-section="categorias">Categorías</a></li>
-                        <li><a href="#" class="hover:text-indigo-200 transition duration-300 font-medium"
+                        <li><a href="{{ route('usuarios.index') }}" class="hover:text-indigo-200 transition duration-300 font-medium"
                                 data-section="usuarios">Usuarios</a></li>
                         <li><a href="#" class="hover:text-indigo-200 transition duration-300 font-medium"
                                 data-section="prestamos">Préstamos</a></li>
@@ -112,7 +112,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="sidebar_text flex items-center space-x-3 p-3 rounded-lg"
+                            <a href="{{ route('usuarios.index') }}" class="sidebar_text flex items-center space-x-3 p-3 rounded-lg"
                                 data-section="prestamos">
                                 <i class="fas fa-user w-5"></i>
                                 <span class="font-medium">Usuarios</span>
@@ -195,7 +195,7 @@
                         </li>
                         <li>
                         <li>
-                            <a href="#" class="sidebar_text flex items-center space-x-3 p-3 rounded-lg"
+                            <a href="{{ route('usuarios.index') }}" class="sidebar_text flex items-center space-x-3 p-3 rounded-lg"
                                 data-section="prestamos">
                                 <i class="fas fa-user w-5"></i>
                                 <span class="font-medium">Usuarios</span>

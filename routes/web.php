@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UsuariosController;
 use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
@@ -40,9 +41,12 @@ Route::middleware((['auth', 'user_type:admin']))->group(function () {
     Route::get('/libros/{id}/edit', [LibrosController::class, 'edit'])->name('libros.edit');
     Route::put('/libros/{id}/update', [LibrosController::class, 'update'])->name('libros.update');
     Route::delete('/libros/{id}', [LibrosController::class, 'destroy'])->name('libros.destroy');
+
+    Route::get('/usuarios', [UsuariosController::class, 'index'])->name('usuarios.index');
 });
 
 Route::middleware(['auth', 'user_type:user'])->group(function () {
-    
+
+
 });
 
