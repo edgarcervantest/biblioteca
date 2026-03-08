@@ -47,7 +47,8 @@ Route::middleware((['auth', 'user_type:admin']))->group(function () {
     Route::post('/usuarios/store', [UsuariosController::class, 'store'])->name('usuarios.store');
     Route::get('/usuarios/{id}/edit', [UsuariosController::class, 'edit'])->name('usuarios.edit');
     Route::put('/usuarios/{id}/update', [UsuariosController::class, 'update'])->name('usuarios.update');
-    // Route::delete('/categorias/{id}', [CategoriasController::class, 'destroy'])->name('categorias.destroy');
+    Route::get('/usuarios/{id}/delete', [UsuariosController::class, 'delete_confirm'])->name('usuarios.delete_confirm');
+    Route::delete('usuarios/{id}', [UsuariosController::class, 'destroy'])->name('usuarios.destroy');
 });
 
 Route::middleware(['auth', 'user_type:user'])->group(function () {

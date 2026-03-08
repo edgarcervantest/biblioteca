@@ -55,12 +55,15 @@
                             <td class="content_text px-4 py-2 border-b-2">
                                 <a href="{{ route('usuarios.edit', $usuario->id) }}"
                                     class="purple_button">Editar</a>
-                                <form action="#" method="POST" class="inline-block">
+                                    <a href="{{ route('usuarios.delete_confirm', $usuario->id) }}" class="inline-block action_button">Eliminar</a>
+
+                                <!-- <form action="#" method="POST" class="inline-block">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit"
                                         class="action_button">Eliminar</button>
-                                </form>
+                                </form> -->
+
                             </td>
                         </tr>
                     @endforeach

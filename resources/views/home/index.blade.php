@@ -108,13 +108,13 @@
                                 class="card_text flex items-center hover:text-purple-600 transition-colors duration-300"
                                 data-section="libros"><i class="fas fa-plus-circle text-sm mr-2"></i> Agregar nuevo
                                 libro</a></li>
-                        <li><a href="#" class="card_text flex items-center" data-section="usuarios"><i
+                        <li><a href="{{ route('usuarios.create') }}" class="card_text flex items-center hover:text-purple-600 transition-colors duration-300" data-section="usuarios"><i
                                     class="fas fa-user-plus text-sm mr-2"></i> Registrar nuevo
                                 usuario</a></li>
-                        <li><a href="#" class="card_text flex items-center" data-section="prestamos"><i
+                        <li><a href="#" class="card_text flex items-center hover:text-purple-600 transition-colors duration-300" data-section="prestamos"><i
                                     class="fas fa-handshake text-sm mr-2"></i> Registrar
                                 préstamo</a></li>
-                        <li><a href="#" class="card_text flex items-center" data-section="prestamos"><i
+                        <li><a href="#" class="card_text flex items-center hover:text-purple-600 transition-colors duration-300" data-section="prestamos"><i
                                     class="fas fa-undo-alt text-sm mr-2"></i> Registrar
                                 devolución</a></li>
                     </ul>
