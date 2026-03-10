@@ -13,7 +13,7 @@
                         </a>
                     </li>
                     <li class="inline-flex items-center">
-                        <a href="{{ route('categorias.index') }}" class="breadcrumb_text">
+                        <a href="{{ route('usuarios.index') }}" class="breadcrumb_text">
                             <i class="fas fa-chevron-right mr-2"></i>
                             Usuarios
                         </a>

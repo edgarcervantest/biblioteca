@@ -59,7 +59,7 @@
                                 data-section="categorias">Categorías</a></li>
                         <li><a href="{{ route('usuarios.index') }}" class="hover:text-indigo-200 transition duration-300 font-medium"
                                 data-section="usuarios">Usuarios</a></li>
-                        <li><a href="#" class="hover:text-indigo-200 transition duration-300 font-medium"
+                        <li><a href="{{ route('prestamos.index') }}" class="hover:text-indigo-200 transition duration-300 font-medium"
                                 data-section="prestamos">Préstamos</a></li>
                         <li><a href="{{ route('logout') }}"
                                 class="hover:text-indigo-200 transition duration-300 font-medium"
@@ -119,7 +119,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="sidebar_text flex items-center space-x-3 p-3 rounded-lg"
+                            <a href="{{ route('prestamos.index') }}" class="sidebar_text flex items-center space-x-3 p-3 rounded-lg"
                                 data-section="prestamos">
                                 <i class="fas fa-exchange-alt w-5"></i>
                                 <span class="font-medium">Préstamos</span>
@@ -201,7 +201,7 @@
                                 <span class="font-medium">Usuarios</span>
                             </a>
                         </li>
-                        <a href="#" class="sidebar_text flex items-center space-x-3 p-3 rounded-lg"
+                        <a href="{{ route('prestamos.index') }}" class="sidebar_text flex items-center space-x-3 p-3 rounded-lg"
                             data-section="prestamos">
                             <i class="fas fa-exchange-alt w-5"></i>
                             <span class="font-medium">Préstamos</span>
