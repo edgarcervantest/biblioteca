@@ -189,7 +189,7 @@
                                     <td class="px-4 py-3">{{ $libro->autor }}</td>
                                     <td class="px-4 py-3">{{ $libro->editorial }}</td>
                                     <td class="px-4 py-3">{{ $libro->categoria?->nombre}}</td>
-                                    <td class="px-4 py-3">{{ $libro->estado }}</td>
+                                    <td class="px-4 py-3">{{ $libro->estatus ? 'Prestado' : 'Disponible' }}</td>
                                     <td class="px-4 py-3">
                                         <a href="{{ route('libros.edit', $libro->id) }}" class="purple_button mr-2">Editar</a>
                                         <form action="{{ route('libros.destroy', $libro->id) }}" method="POST"

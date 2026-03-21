@@ -29,6 +29,12 @@
             </div>
         @endif
 
+        @if (session('error'))
+            <div class="bg-red-100 border border-red-400 250 text-red-700 px-4 py-3 font-bold rounded-md mb-4">
+                {{ session('error') }}
+            </div>
+        @endif
+
         <a href="{{ route('prestamos.create') }}" class="purple_button">Agregar préstamo</a><br>
         <br><br>
         <div class="grey_card">
@@ -37,13 +43,22 @@
                     <tr>
                         <th class="content_text px-4 py-2 border-b-2 font-bold">ID</th>
                         <th class="content_text px-4 py-2 border-b-2 font-bold">Libro</th>
+                        <th class="content_text px-4 py-2 border-b-2 font-bold">Usuario</th>
+                        <th class="content_text px-4 py-2 border-b-2 font-bold">Fecha</th>
                         <th class="content_text px-4 py-2 border-b-2 font-bold">Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach ($prestamos as $prestamo)
+                        <tr>
+                            <td class="content_text px-4 py-2 border-b-2">{{ $prestamo->id }}</td>
+                            <td class="content_text px-4 py-2 border-b-2">{{ $prestamo->libro->nombre }}</td>
+                            <td class="content_text px-4 py-2 border-b-2">{{ $prestamo->usuario->name }}</td>
+                            <td class="content_text px-4 py-2 border-b-2">{{ $prestamo->created_at->format('d/m/Y') }}</td>
+                    @endforeach
                 </tbody>
             </table>
         </div>
-    
+
     </div>
 @endsection
