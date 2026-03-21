@@ -164,19 +164,19 @@
                     <table class="min-w-full divide-y ">
                         <thead class="grey_card">
                             <tr>
-                                <th class="px-4 py-3 text-left text-xs font-bold card_text uppercase tracking-wider">
+                                <th class="px-4 py-3 text-center text-xs font-bold card_text uppercase tracking-wider">
                                     Nombre</th>
-                                <th class="px-4 py-3 text-left text-xs font-bold card_text uppercase tracking-wider">
+                                <th class="px-4 py-3 text-center text-xs font-bold card_text uppercase tracking-wider">
                                     ISBN</th>
-                                <th class="px-4 py-3 text-left text-xs font-bold card_text uppercase tracking-wider">
+                                <th class="px-4 py-3 text-center text-xs font-bold card_text uppercase tracking-wider">
                                     Autor</th>
-                                <th class="px-4 py-3 text-left text-xs font-bold card_text uppercase tracking-wider">
+                                <th class="px-4 py-3 text-center text-xs font-bold card_text uppercase tracking-wider">
                                     Editorial</th>
-                                <th class="px-4 py-3 text-left text-xs font-bold card_text uppercase tracking-wider">
+                                <th class="px-4 py-3 text-center text-xs font-bold card_text uppercase tracking-wider">
                                     Categoria</th>
-                                <th class="px-4 py-3 text-left text-xs font-bold card_text uppercase tracking-wider">
+                                <th class="px-4 py-3 text-center text-xs font-bold card_text uppercase tracking-wider">
                                     Estado</th>
-                                <th class="px-4 py-3 text-left text-xs font-bold card_text uppercase tracking-wider">
+                                <th class="px-4 py-3 text-center text-xs font-bold card_text uppercase tracking-wider">
                                     Acciones</th>
                             </tr>
                         </thead>
@@ -189,7 +189,11 @@
                                     <td class="px-4 py-3">{{ $libro->autor }}</td>
                                     <td class="px-4 py-3">{{ $libro->editorial }}</td>
                                     <td class="px-4 py-3">{{ $libro->categoria?->nombre}}</td>
-                                    <td class="px-4 py-3">{{ $libro->estatus ? 'Prestado' : 'Disponible' }}</td>
+                                     @if ($libro->estatus == 0)
+                                     <td class="px-4 py-3"><span class="px-2 py-1 text-xs rounded-full bg-green-100 text-green-800">Disponible</span></td>
+                                     @else
+                                     <td class="px-4 py-3"><span class="px-2 py-1 text-xs rounded-full bg-red-100 text-red-800">Prestado</span></td>
+                                     @endif
                                     <td class="px-4 py-3">
                                         <a href="{{ route('libros.edit', $libro->id) }}" class="purple_button mr-2">Editar</a>
                                         <form action="{{ route('libros.destroy', $libro->id) }}" method="POST"
