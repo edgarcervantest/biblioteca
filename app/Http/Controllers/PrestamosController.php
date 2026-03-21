@@ -62,21 +62,44 @@ class PrestamosController extends Controller
         \DB::beginTransaction();
 
         try {
-        $prestamo = new Prestamo();
-        $prestamo->usuario_id = $request->input('usuario_id');
-        $prestamo->libro_id = $request->input('libro_id');
-        $prestamo->save();
+            $prestamo = new Prestamo();
+            $prestamo->usuario_id = $request->input('usuario_id');
+            $prestamo->libro_id = $request->input('libro_id');
+            $prestamo->save();
 
-        $libro = Libro::findOrFail($request->input('libro_id'));
-        $libro->estatus = 1;
-        $libro->save();
+            $libro = Libro::findOrFail($request->input('libro_id'));
+            $libro->estatus = 1;
+            $libro->save();
 
-        \DB::commit();
+            \DB::commit();
         } catch (\Exception $e) {
             \DB::rollBack();
             return redirect()->route('prestamos.index')->with('error', 'Error al crear el prestamo');
         }
 
         return redirect()->route('prestamos.index')->with('success', 'Prestamo creado exitosamente.');
+    }
+
+    public function entregar_libro($id)
+    {
+
+        \DB::beginTransaction();
+        try {
+            $prestamo = Prestamo::findOrFail($id);
+            $prestamo->estado = 'entregado';
+            $prestamo->fecha_entrega = now();
+            $prestamo->save();
+
+            $libro = Libro::findOrFail($prestamo->libro_id);
+            $libro->estatus = 0;
+            $libro->save();
+
+            \DB::commit();
+        } catch (\Exception $e) {
+            \DB::rollBack();
+            return redirect()->route('prestamos.index')->with('error', 'Error al entregar el libro');
+        }
+
+        return redirect()->route('prestamos.index')->with('success', 'Libro entregado exitosamente.');
     }
 }
