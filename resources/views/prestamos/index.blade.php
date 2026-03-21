@@ -29,16 +29,14 @@
             </div>
         @endif
 
-        <a href="#" class="purple_button">Agregar usuario</a><br>
+        <a href="{{ route('prestamos.create') }}" class="purple_button">Agregar préstamo</a><br>
         <br><br>
         <div class="grey_card">
             <table class="min-w-full table-auto">
                 <thead>
                     <tr>
                         <th class="content_text px-4 py-2 border-b-2 font-bold">ID</th>
-                        <th class="content_text px-4 py-2 border-b-2 font-bold">Nombre</th>
-                        <th class="content_text px-4 py-2 border-b-2 font-bold">Email</th>
-                        <th class="content_text px-4 py-2 border-b-2 font-bold">Tipo de usuario</th>
+                        <th class="content_text px-4 py-2 border-b-2 font-bold">Libro</th>
                         <th class="content_text px-4 py-2 border-b-2 font-bold">Acciones</th>
                     </tr>
                 </thead>
