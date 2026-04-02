@@ -1,3 +1,15 @@
+#--- Etapa 1: Build de front ---
+FROM node:20 AS node_builder
+
+WORKDIR /app
+
+COPY package*.json ./
+RUN npm install
+
+COPY . .
+RUN npm run build
+
+#--- Etapa 2: Build de back ---
 FROM php:8.4-fpm
 
 # Instalar dependencias del sistema
@@ -21,6 +33,9 @@ WORKDIR /var/www
 
 # Copiar proyecto
 COPY . .
+
+# Copiar assets ya compilados
+COPY --from=node_builder /app/public/build /var/www/public/build
 
 # Instalar dependencias de Laravel
 RUN composer install --no-dev --optimize-autoloader
