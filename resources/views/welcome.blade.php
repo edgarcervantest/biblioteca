@@ -155,7 +155,7 @@
             </div>
             
             <div class="text-center mt-12">
-                <a href="#" class="inline-block bg-transparent border-2 border-white content_text font-bold">Ver catálogo completo</a>
+                <a href="#" class="inline-block bg-transparent border-2 border-white content_text font-bold py-2 px-6 rounded-md hover:bg-white hover:text-black transition-colors duration-300">Ver catálogo completo</a>
             </div>
         </div>
     </section>
