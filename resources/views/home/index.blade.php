@@ -31,7 +31,7 @@
                 <div class="flex justify-between items-start">
                     <div>
                         <p class="card_text font-bold">Libros disponibles</p>
-                        <p class="text-2xl font-bold card_text">892</p>
+                        <p class="text-2xl font-bold card_text">{{ $total_libros }}</p>
                     </div>
                     <div class="bg-indigo-100 p-3 rounded-full">
                         <i class="fas fa-book text-indigo-600"></i>
@@ -46,7 +46,7 @@
                 <div class="flex justify-between items-start">
                     <div>
                         <p class="card_text font-bold">Préstamos activos</p>
-                        <p class="text-2xl font-bold card_text">87</p>
+                        <p class="text-2xl font-bold card_text">{{ $prestamos_activos }}</p>
                     </div>
                     <div class="bg-green-100 p-3 rounded-full">
                         <i class="fas fa-exchange-alt text-green-600"></i>
@@ -61,7 +61,7 @@
                 <div class="flex justify-between items-start">
                     <div>
                         <p class="card_text font-bold">Usuarios registrados</p>
-                        <p class="text-2xl font-bold card_text">342</p>
+                        <p class="text-2xl font-bold card_text">{{$total_usuarios}}</p>
                     </div>
                     <div class="bg-blue-100 p-3 rounded-full">
                         <i class="fas fa-users text-blue-600"></i>
@@ -76,7 +76,7 @@
                 <div class="flex justify-between items-start">
                     <div>
                         <p class="card_text font-bold">Devoluciones pendientes</p>
-                        <p class="text-2xl font-bold card_text">14</p>
+                        <p class="text-2xl font-bold card_text">{{$devoluciones_pendientes}}</p>
                     </div>
                     <div class="bg-yellow-100 p-3 rounded-full">
                         <i class="fas fa-clock text-yellow-600"></i>
@@ -114,7 +114,7 @@
                         <li><a href="{{ route('prestamos.create') }}" class="card_text flex items-center hover:text-purple-600 transition-colors duration-300" data-section="prestamos"><i
                                     class="fas fa-handshake text-sm mr-2"></i> Registrar
                                 préstamo</a></li>
-                        <li><a href="#" class="card_text flex items-center hover:text-purple-600 transition-colors duration-300" data-section="prestamos"><i
+                        <li><a href="{{ route('prestamos.index') }}" class="card_text flex items-center hover:text-purple-600 transition-colors duration-300" data-section="prestamos"><i
                                     class="fas fa-undo-alt text-sm mr-2"></i> Registrar
                                 devolución</a></li>
                     </ul>

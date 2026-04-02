@@ -12,7 +12,7 @@ class PrestamosController extends Controller
 {
     public function index()
     {
-        $prestamos = Prestamo::with('usuario', 'libro')->get();
+        $prestamos = Prestamo::with('usuario', 'libro')->paginate(3);
         return view('prestamos.index', compact('prestamos'));
     }
 
