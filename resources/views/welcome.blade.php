@@ -45,7 +45,7 @@
                     <li><a href="#catalogo" class="content_text hover:text-purple-600 transition-colors duration-300">Catálogo</a></li>
                     <li><a href="#eventos" class="content_text hover:text-purple-600 transition-colors duration-300">Eventos</a></li>
                     <li><a href="#servicios" class="content_text hover:text-purple-600 transition-colors duration-300">Servicios</a></li>
-                    <li><a href="{{ route('login') }}" class="purple_buttonbg-transparent border-2 border-white content_text font-bold px-2 py-2 rounded-md hover:bg-white hover:text-black transition-colors duration-300 px-4 py-2 rounded-md "><i class="fas fa-sign-in-alt mr-2"></i>Login</a></li>
+                    <li><a href="{{ route('login') }}" class="purple_buttonbg-transparent border-2 border-white content_text font-bold px-2 py-2 rounded-md hover:bg-white hover:text-black transition-colors duration-300"><i class="fas fa-sign-in-alt mr-2"></i>Login</a></li>
                 </ul>
             </nav>
 
@@ -62,7 +62,7 @@
                 <li><a href="#catalogo" class="content_text block py-2 hover:text-purple-600">Catálogo</a></li>
                 <li><a href="#eventos" class="content_text block py-2 hover:text-purple-600">Eventos</a></li>
                 <li><a href="#servicios" class="content_text block py-2 hover:text-purple-600">Servicios</a></li>
-                <li><a href="{{ route ('login') }}" id="mobile-login-btn" class="bg-transparent border-2 border-white content_text font-bold px-2 py-2 rounded-md hover:bg-white hover:text-black transition-colors duration-300 rounded-md inline-block mt-2"><i class="fas fa-sign-in-alt mr-2"></i>Login</a></li>
+                <li><a href="{{ route ('login') }}" id="mobile-login-btn" class="bg-transparent border-2 border-white content_text font-bold px-2 py-2 rounded-md hover:bg-white hover:text-black transition-colors duration-300 inline-block mt-2"><i class="fas fa-sign-in-alt mr-2"></i>Login</a></li>
             </ul>
         </div>
     </header>
@@ -155,7 +155,7 @@
             </div>
             
             <div class="text-center mt-12">
-                <a href="#" class="inline-block bg-transparent border-2 border-white content_text font-bold px-6 py-3 rounded-md hover:bg-white hover:text-black transition-colors duration-300 font-bold px-8 py-3 rounded-md">Ver catálogo completo</a>
+                <a href="#" class="inline-block bg-transparent border-2 border-white content_text font-bold">Ver catálogo completo</a>
             </div>
         </div>
     </section>
@@ -339,7 +339,7 @@
     </footer>
 
     <!-- Modal de Login -->
-    <div id="login-modal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 z-50 flex items-center justify-center p-4">
+    <div id="login-modal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 z-50  items-center justify-center p-4">
         <div class="bg-white rounded-lg shadow-2xl max-w-md w-full">
             <div class="flex justify-between items-center p-6 border-b">
                 <h3 class="text-2xl font-bold text-blue-900">Iniciar sesión</h3>
