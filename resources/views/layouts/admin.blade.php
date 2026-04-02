@@ -71,9 +71,9 @@
                 <div class="flex items-center space-x-3">
                     <div class="hidden md:flex flex-col text-right">
                         <span class="font-medium">{{ auth()->user()->name }}</span>
-                        <span class="text-sm text-indigo-200 transform capitalize">{{ auth()->user()->user_type }}</span>
+                        <span class="text-sm text-purple-200 transform capitalize">{{ auth()->user()->user_type }}</span>
                     </div>
-                    <div class="w-10 h-10 rounded-full bg-indigo-600 flex items-center justify-center">
+                    <div class="w-10 h-10 rounded-full bg-purple-600 flex items-center justify-center">
                         <i class="fas fa-user"></i>
                     </div>
                 </div>
@@ -134,24 +134,7 @@
                         </li>
                     </ul>
 
-                    <!-- Información de biblioteca -->
-                    <div class="grey_card container mx-auto px-4 py-8">
-                        <h3 class="content_text mb-2 font-bold">Resumen de bibli</h3>
-                        <div class="space-y-1 text-sm">
-                            <div class="flex justify-between">
-                                <span class="content_text font-bold">Libros totales:</span>
-                                <span class="content_text">1,245</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span class="content_text font-bold">Préstamos activos:</span>
-                                <span class="content_text">87</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span class="content_text font-bold">Usuarios:</span>
-                                <span class="content_text">342</span>
-                            </div>
-                        </div>
-                    </div>
+               
 
                 </nav>
             </aside>

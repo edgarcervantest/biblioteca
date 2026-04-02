@@ -40,6 +40,19 @@
   border-color: #767676;
   border-width: 1px;
 }
+
+.book-card {
+  background: #131313;
+}
+
+.event-card {
+  background: #19191c;
+}
+
+.grey_section {
+  background: #19191c;
+}
+
 .table{
   background: #19191c;
   color: #e6e6e6;
@@ -59,7 +72,7 @@
 .content_text {
   color: #e6e6e6;
   font-size: 1rem;
-  font-weight: 400;
+  /* font-weight: 400; */
   font-family: Google Sans;
 }
 
@@ -115,7 +128,7 @@
 /* BOTONES */
 .purple_button {
   /* background-image: linear-gradient(to left, #b02dcc, #7b1e8a); */
-  background-color: #b02dcc;
+  background-color: #6f0486;
   color: #e6e6e6;
   padding: 0.5rem 1rem;
   border-radius: 0.375rem;

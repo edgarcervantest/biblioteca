@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
     <style>
         * {
             font-family: 'Open Sans', sans-serif;
@@ -27,54 +28,54 @@
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="background">
     <!-- Header con menú -->
-    <header class="sticky top-0 z-50 bg-white shadow-md">
+    <header class="header sticky top-0 z-5 shadow-md">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <!-- Logo -->
             <div class="flex items-center">
-                <i class="fas fa-book text-2xl text-blue-700 mr-2"></i>
-                <h1 class="text-2xl font-bold text-blue-900">Biblioteca<span class="text-blue-600">Comunitaria</span></h1>
+                <i class="fas fa-paperclip text-2xl text-white mr-2"></i>
+                <h1 class="text-2xl title_text font-bold text-white">Bibli</h1>
             </div>
 
             <!-- Menú de navegación desktop -->
             <nav class="hidden md:block">
-                <ul class="flex space-x-8">
-                    <li><a href="#inicio" class="text-blue-900 font-semibold hover:text-blue-600 transition-colors duration-300">Inicio</a></li>
-                    <li><a href="#catalogo" class="text-gray-700 hover:text-blue-600 transition-colors duration-300">Catálogo</a></li>
-                    <li><a href="#eventos" class="text-gray-700 hover:text-blue-600 transition-colors duration-300">Eventos</a></li>
-                    <li><a href="#servicios" class="text-gray-700 hover:text-blue-600 transition-colors duration-300">Servicios</a></li>
-                    <li><a href="{{ route('login') }}" class="bg-blue-700 text-white px-4 py-2 rounded-md hover:bg-blue-800 transition-colors duration-300"><i class="fas fa-sign-in-alt mr-2"></i>Login</a></li>
+                <ul class="flex space-x-8 ">
+                    <li><a href="#inicio" class="content_text font-semibold hover:text-purple-600 transition-colors duration-300">Inicio</a></li>
+                    <li><a href="#catalogo" class="content_text hover:text-purple-600 transition-colors duration-300">Catálogo</a></li>
+                    <li><a href="#eventos" class="content_text hover:text-purple-600 transition-colors duration-300">Eventos</a></li>
+                    <li><a href="#servicios" class="content_text hover:text-purple-600 transition-colors duration-300">Servicios</a></li>
+                    <li><a href="{{ route('login') }}" class="purple_buttonbg-transparent border-2 border-white content_text font-bold px-2 py-2 rounded-md hover:bg-white hover:text-black transition-colors duration-300 px-4 py-2 rounded-md "><i class="fas fa-sign-in-alt mr-2"></i>Login</a></li>
                 </ul>
             </nav>
 
             <!-- Botón menú hamburguesa -->
-            <button id="menu-toggle" class="md:hidden text-blue-900 text-2xl focus:outline-none">
+            <button id="menu-toggle" class="md:hidden text-purple-900 text-2xl focus:outline-none">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
 
         <!-- Menú móvil -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute w-full z-40 flex-col py-4">
+        <div id="mobile-menu" class="hidden md:hidden header shadow-lg absolute w-full z-40 flex-col py-4">
             <ul class="flex flex-col space-y-4 px-4">
-                <li><a href="#inicio" class="text-blue-900 font-semibold block py-2 hover:text-blue-600">Inicio</a></li>
-                <li><a href="#catalogo" class="text-gray-700 block py-2 hover:text-blue-600">Catálogo</a></li>
-                <li><a href="#eventos" class="text-gray-700 block py-2 hover:text-blue-600">Eventos</a></li>
-                <li><a href="#servicios" class="text-gray-700 block py-2 hover:text-blue-600">Servicios</a></li>
-                <li><a href="{{ route ('login') }}" id="mobile-login-btn" class="bg-blue-700 text-white px-4 py-2 rounded-md inline-block hover:bg-blue-800 mt-2"><i class="fas fa-sign-in-alt mr-2"></i>Login</a></li>
+                <li><a href="#inicio" class="content_text font-semibold block py-2 hover:text-purple-600">Inicio</a></li>
+                <li><a href="#catalogo" class="content_text block py-2 hover:text-purple-600">Catálogo</a></li>
+                <li><a href="#eventos" class="content_text block py-2 hover:text-purple-600">Eventos</a></li>
+                <li><a href="#servicios" class="content_text block py-2 hover:text-purple-600">Servicios</a></li>
+                <li><a href="{{ route ('login') }}" id="mobile-login-btn" class="bg-transparent border-2 border-white content_text font-bold px-2 py-2 rounded-md hover:bg-white hover:text-black transition-colors duration-300 rounded-md inline-block mt-2"><i class="fas fa-sign-in-alt mr-2"></i>Login</a></li>
             </ul>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="inicio" class="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-16 md:py-24">
+    <section id="inicio" class="py-16 md:py-24">
         <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
             <div class="md:w-1/2 mb-10 md:mb-0">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6">Explora el mundo a través de los libros</h2>
-                <p class="text-xl mb-8 text-blue-100">Descubre nuestra amplia colección de libros, revistas y recursos digitales. Un espacio para todos los amantes de la lectura.</p>
+                <h2 class="text-4xl md:text-5xl title_text font-bold mb-6">Explora el mundo a través de los libros</h2>
+                <p class="text-xl mb-8 text-gray-400">Descubre nuestra amplia colección de libros, revistas y recursos digitales. Un espacio para todos los amantes de la lectura.</p>
                 <div class="flex flex-wrap gap-4">
-                    <a href="#catalogo" class="bg-white text-blue-900 font-bold px-6 py-3 rounded-md hover:bg-gray-100 transition-colors duration-300">Explorar Catálogo</a>
-                    <a href="#registro" class="bg-transparent border-2 border-white text-white font-bold px-6 py-3 rounded-md hover:bg-white hover:text-blue-900 transition-colors duration-300">Hazte socio</a>
+                    <a href="#catalogo" class="bg-transparent border-2 border-white content_text font-bold px-6 py-3 rounded-md hover:bg-white hover:text-black transition-colors duration-300">Explorar catálogo</a>
+                    <a href="#registro" class="bg-transparent border-2 border-white content_text font-bold px-6 py-3 rounded-md hover:bg-white hover:text-black transition-colors duration-300">Hazte socio</a>
                 </div>
             </div>
             <div class="md:w-1/2 flex justify-center">
@@ -86,146 +87,146 @@
     </section>
 
     <!-- Sección de catálogo -->
-    <section id="catalogo" class="py-16 bg-white">
+    <section id="catalogo" class="py-16 grey_section">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-4 text-blue-900">Novedades en el catálogo</h2>
-            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Descubre los últimos libros añadidos a nuestra colección. Novedades en ficción, no ficción, literatura infantil y más.</p>
+            <h2 class="text-3xl font-bold text-center mb-4 title_text">Novedades en el catálogo</h2>
+            <p class="text-center content_text text-gray-400 mb-12 max-w-2xl mx-auto">Descubre los últimos libros añadidos a nuestra colección. Novedades en ficción, no ficción, literatura infantil y más.</p>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Libro 1 -->
-                <div class="book-card bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl">
+                <div class="book-card rounded-lg overflow-hidden shadow-lg hover:shadow-xl">
                     <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
                          alt="Libro abierto sobre una mesa" 
                          class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="font-bold text-lg mb-2 text-blue-900">El jardín de los secretos</h3>
-                        <p class="text-gray-600 mb-4">Una historia fascinante sobre misterios familiares y descubrimientos personales en un jardín olvidado.</p>
+                        <h3 class="font-bold text-lg mb-2 title_text">El jardín de los secretos</h3>
+                        <p class="content_text text-gray-400 mb-4">Una historia fascinante sobre misterios familiares y descubrimientos personales en un jardín olvidado.</p>
                         <div class="flex justify-between items-center">
-                            <span class="text-sm text-gray-500">Ficción</span>
-                            <a href="#" class="text-blue-700 hover:text-blue-900 font-medium">Reservar <i class="fas fa-arrow-right ml-1"></i></a>
+                            <span class="text-sm content_text text-gray-400">Ficción</span>
+                            <a href="{{ route('login') }}" class="text-purple-700 hover:text-purple-900 font-medium content_text">Reservar <i class="fas fa-arrow-right ml-1"></i></a>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Libro 2 -->
-                <div class="book-card bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl">
+                <div class="book-card rounded-lg overflow-hidden shadow-lg hover:shadow-xl">
                     <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
                          alt="Libro con ilustraciones abierto" 
                          class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="font-bold text-lg mb-2 text-blue-900">Historia del arte moderno</h3>
-                        <p class="text-gray-600 mb-4">Un recorrido exhaustivo por los movimientos artísticos que definieron el siglo XX y sus influencias actuales.</p>
+                        <h3 class="font-bold text-lg mb-2 title_text">Historia del arte moderno</h3>
+                        <p class="content_text text-gray-400 mb-4">Un recorrido exhaustivo por los movimientos artísticos que definieron el siglo XX y sus influencias actuales.</p>
                         <div class="flex justify-between items-center">
-                            <span class="text-sm text-gray-500">Arte</span>
-                            <a href="#" class="text-blue-700 hover:text-blue-900 font-medium">Reservar <i class="fas fa-arrow-right ml-1"></i></a>
+                            <span class="text-sm content_text text-gray-400">Arte</span>
+                            <a href="{{ route('login') }}" class="text-purple-700 hover:text-purple-900 content_text font-medium">Reservar <i class="fas fa-arrow-right ml-1"></i></a>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Libro 3 -->
-                <div class="book-card bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl">
+                <div class="book-card rounded-lg overflow-hidden shadow-lg hover:shadow-xl">
                     <img src="https://images.unsplash.com/photo-1463320726281-696a485928c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
                          alt="Libros apilados sobre una mesa" 
                          class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="font-bold text-lg mb-2 text-blue-900">El universo en tus manos</h3>
-                        <p class="text-gray-600 mb-4">Una introducción accesible a la astronomía y los misterios del cosmos para todos los públicos.</p>
+                        <h3 class="font-bold text-lg mb-2 title_text">El universo en tus manos</h3>
+                        <p class="content_text text-gray-400 mb-4">Una introducción accesible a la astronomía y los misterios del cosmos para todos los públicos.</p>
                         <div class="flex justify-between items-center">
-                            <span class="text-sm text-gray-500">Ciencia</span>
-                            <a href="#" class="text-blue-700 hover:text-blue-900 font-medium">Reservar <i class="fas fa-arrow-right ml-1"></i></a>
+                            <span class="text-sm content_text text-gray-400">Ciencia</span>
+                            <a href="{{ route('login') }}" class="text-purple-700 hover:text-purple-900 content_text font-medium">Reservar <i class="fas fa-arrow-right ml-1"></i></a>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Libro 4 -->
-                <div class="book-card bg-gray-50 rounded-lg overflow-hidden shadow-lg hover:shadow-xl">
+                <div class="book-card rounded-lg overflow-hidden shadow-lg hover:shadow-xl">
                     <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
                          alt="Persona leyendo libro en la biblioteca" 
                          class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="font-bold text-lg mb-2 text-blue-900">Cuentos de la abuela</h3>
-                        <p class="text-gray-600 mb-4">Una colección de cuentos tradicionales adaptados para el público infantil con hermosas ilustraciones.</p>
+                        <h3 class="font-bold text-lg mb-2 title_text">Cuentos de la abuela</h3>
+                        <p class="content_text text-gray-400 mb-4">Una colección de cuentos tradicionales adaptados para el público infantil con hermosas ilustraciones.</p>
                         <div class="flex justify-between items-center">
-                            <span class="text-sm text-gray-500">Infantil</span>
-                            <a href="#" class="text-blue-700 hover:text-blue-900 font-medium">Reservar <i class="fas fa-arrow-right ml-1"></i></a>
+                            <span class="text-sm content_text text-gray-400">Infantil</span>
+                            <a href="#" class="text-purple-700 hover:text-purple-900 content_text font-medium">Reservar <i class="fas fa-arrow-right ml-1"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
             
             <div class="text-center mt-12">
-                <a href="#" class="inline-block bg-blue-700 text-white font-bold px-8 py-3 rounded-md hover:bg-blue-800 transition-colors duration-300">Ver catálogo completo</a>
+                <a href="#" class="inline-block bg-transparent border-2 border-white content_text font-bold px-6 py-3 rounded-md hover:bg-white hover:text-black transition-colors duration-300 font-bold px-8 py-3 rounded-md">Ver catálogo completo</a>
             </div>
         </div>
     </section>
 
     <!-- Sección de eventos -->
-    <section id="eventos" class="py-16 bg-gray-100">
+    <section id="eventos" class="py-16">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-4 text-blue-900">Próximos eventos</h2>
-            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Participa en nuestras actividades culturales, clubes de lectura y talleres para todas las edades.</p>
+            <h2 class="text-3xl font-bold text-center mb-4 title_text">Próximos eventos</h2>
+            <p class="text-center content_text text-gray-400 mb-12 max-w-2xl mx-auto">Participa en nuestras actividades culturales, clubes de lectura y talleres para todas las edades.</p>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Evento 1 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                <div class="event-card rounded-lg overflow-hidden shadow-lg">
                     <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
                          alt="Club de lectura en la biblioteca" 
                          class="w-full h-48 object-cover">
                     <div class="p-6">
                         <div class="flex items-center mb-2">
-                            <div class="bg-blue-100 text-blue-900 font-bold text-center rounded-md py-1 px-3 mr-4">
+                            <div class="bg-purple-100 content_text text-purple-900 font-bold text-center rounded-md py-1 px-3 mr-4">
                                 <div class="text-lg">15</div>
                                 <div class="text-xs">JUN</div>
                             </div>
                             <div>
-                                <h3 class="font-bold text-lg text-blue-900">Club de lectura mensual</h3>
-                                <p class="text-gray-600 text-sm">18:00 - 20:00 h</p>
+                                <h3 class="font-bold text-lg title_text">Club de lectura mensual</h3>
+                                <p class="content_text text-gray-400 text-sm">18:00 - 20:00 h</p>
                             </div>
                         </div>
-                        <p class="text-gray-700 mb-4">Discusión sobre "Cien años de soledad" de Gabriel García Márquez. Abierto a todos los públicos.</p>
-                        <a href="#" class="text-blue-700 hover:text-blue-900 font-medium">Más información <i class="fas fa-arrow-right ml-1"></i></a>
+                        <p class="content_text text-gray-400 mb-4">Discusión sobre "Cien años de soledad" de Gabriel García Márquez. Abierto a todos los públicos.</p>
+                        <a href="#" class="content_text text-purple-700 hover:text-purple-900 font-medium">Más información <i class="fas fa-arrow-right ml-1"></i></a>
                     </div>
                 </div>
                 
                 <!-- Evento 2 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                <div class="event-card rounded-lg overflow-hidden shadow-lg">
                     <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
                          alt="Taller de escritura creativa" 
                          class="w-full h-48 object-cover">
                     <div class="p-6">
                         <div class="flex items-center mb-2">
-                            <div class="bg-blue-100 text-blue-900 font-bold text-center rounded-md py-1 px-3 mr-4">
+                            <div class="bg-purple-100 text-purple-900 content_text font-bold text-center rounded-md py-1 px-3 mr-4">
                                 <div class="text-lg">22</div>
                                 <div class="text-xs">JUN</div>
                             </div>
                             <div>
-                                <h3 class="font-bold text-lg text-blue-900">Taller de escritura creativa</h3>
-                                <p class="text-gray-600 text-sm">17:00 - 19:00 h</p>
+                                <h3 class="font-bold text-lg title_text">Taller de escritura creativa</h3>
+                                <p class="content_text text-gray-400 text-sm">17:00 - 19:00 h</p>
                             </div>
                         </div>
-                        <p class="text-gray-700 mb-4">Aprende técnicas de narrativa y desarrollo de personajes con la escritora María González.</p>
-                        <a href="#" class="text-blue-700 hover:text-blue-900 font-medium">Más información <i class="fas fa-arrow-right ml-1"></i></a>
+                        <p class="content_text text-gray-400 mb-4">Aprende técnicas de narrativa y desarrollo de personajes con la escritora María González.</p>
+                        <a href="#" class="content_text text-purple-700 hover:text-purple-900 font-medium">Más información <i class="fas fa-arrow-right ml-1"></i></a>
                     </div>
                 </div>
                 
                 <!-- Evento 3 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+                <div class="event-card rounded-lg overflow-hidden shadow-lg">
                     <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
                          alt="Hora del cuento para niños" 
                          class="w-full h-48 object-cover">
                     <div class="p-6">
                         <div class="flex items-center mb-2">
-                            <div class="bg-blue-100 text-blue-900 font-bold text-center rounded-md py-1 px-3 mr-4">
+                            <div class="bg-purple-100 text-purple-900 content_text font-bold text-center rounded-md py-1 px-3 mr-4">
                                 <div class="text-lg">25</div>
                                 <div class="text-xs">JUN</div>
                             </div>
                             <div>
-                                <h3 class="font-bold text-lg text-blue-900">Hora del cuento para niños</h3>
-                                <p class="text-gray-600 text-sm">11:00 - 12:00 h</p>
+                                <h3 class="font-bold text-lg title_text">Hora del cuento para niños</h3>
+                                <p class="content_text text-gray-400 text-sm">11:00 - 12:00 h</p>
                             </div>
                         </div>
-                        <p class="text-gray-700 mb-4">Sesión de cuentacuentos para niños de 3 a 8 años. Actividad gratuita con inscripción previa.</p>
-                        <a href="#" class="text-blue-700 hover:text-blue-900 font-medium">Más información <i class="fas fa-arrow-right ml-1"></i></a>
+                        <p class="content_text text-gray-400 mb-4">Sesión de cuentacuentos para niños de 3 a 8 años. Actividad gratuita con inscripción previa.</p>
+                        <a href="#" class="content_text text-purple-700 hover:text-purple-900 font-medium">Más información <i class="fas fa-arrow-right ml-1"></i></a>
                     </div>
                 </div>
             </div>
@@ -233,65 +234,65 @@
     </section>
 
     <!-- Sección de servicios -->
-    <section id="servicios" class="py-16 bg-white">
+    <section id="servicios" class="py-16">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-4 text-blue-900">Nuestros servicios</h2>
-            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Ofrecemos una amplia gama de servicios para satisfacer las necesidades de nuestros usuarios.</p>
+            <h2 class="text-3xl font-bold text-center mb-4 title_text">Nuestros servicios</h2>
+            <p class="text-center content_text text-gray-400 mb-12 max-w-2xl mx-auto">Ofrecemos una amplia gama de servicios para satisfacer las necesidades de nuestros usuarios.</p>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Servicio 1 -->
                 <div class="text-center p-6">
-                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-book-open text-blue-700 text-2xl"></i>
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-book-open text-purple-700 text-2xl"></i>
                     </div>
-                    <h3 class="font-bold text-xl mb-4 text-blue-900">Préstamo de libros</h3>
-                    <p class="text-gray-700">Prestamos libros, revistas, DVDs y otros materiales por un período de 3 semanas renovable.</p>
+                    <h3 class="font-bold text-xl mb-4 title_text">Préstamo de libros</h3>
+                    <p class="content_text text-gray-400">Prestamos libros, revistas, DVDs y otros materiales por un período de 3 semanas renovable.</p>
                 </div>
                 
                 <!-- Servicio 2 -->
                 <div class="text-center p-6">
-                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-laptop text-blue-700 text-2xl"></i>
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-laptop text-purple-700 text-2xl"></i>
                     </div>
-                    <h3 class="font-bold text-xl mb-4 text-blue-900">Acceso a recursos digitales</h3>
-                    <p class="text-gray-700">Acceso gratuito a bases de datos, e-books, revistas electrónicas y cursos en línea.</p>
+                    <h3 class="font-bold text-xl mb-4 title_text">Acceso a recursos digitales</h3>
+                    <p class="content_text text-gray-400">Acceso gratuito a bases de datos, e-books, revistas electrónicas y cursos en línea.</p>
                 </div>
                 
                 <!-- Servicio 3 -->
                 <div class="text-center p-6">
-                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <i class="fas fa-users text-blue-700 text-2xl"></i>
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-users text-purple-700 text-2xl"></i>
                     </div>
-                    <h3 class="font-bold text-xl mb-4 text-blue-900">Espacios de estudio</h3>
-                    <p class="text-gray-700">Salas de estudio individuales y grupales, así como áreas de lectura silenciosa.</p>
+                    <h3 class="font-bold text-xl mb-4 title_text">Espacios de estudio</h3>
+                    <p class="content_text text-gray-400">Salas de estudio individuales y grupales, así como áreas de lectura silenciosa.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-blue-900 text-white pt-12 pb-8">
+    <footer class="footer text-white pt-12 pb-8">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <!-- Columna 1: Información -->
                 <div>
                     <div class="flex items-center mb-4">
-                        <i class="fas fa-book text-2xl text-blue-300 mr-2"></i>
-                        <h3 class="text-xl font-bold">Biblioteca<span class="text-blue-300">Comunitaria</span></h3>
+                        <i class="fas fa-paperclip text-2xl text-white mr-2"></i>
+                        <h3 class="text-xl title_text font-bold">Bibli</h3>
                     </div>
-                    <p class="text-blue-200 mb-4">Un espacio para el conocimiento, la cultura y el encuentro comunitario.</p>
+                    <p class="content_text text-gray-400 mb-4">Un espacio para el conocimiento, la cultura y el encuentro comunitario.</p>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-blue-300 hover:text-white text-xl"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-blue-300 hover:text-white text-xl"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-blue-300 hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-blue-300 hover:text-white text-xl"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="text-purple-300 hover:text-white text-xl"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-purple-300 hover:text-white text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-purple-300 hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-purple-300 hover:text-white text-xl"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
                 
                 <!-- Columna 2: Horarios -->
                 <div>
-                    <h4 class="text-lg font-bold mb-4">Horarios</h4>
-                    <ul class="space-y-2 text-blue-200">
+                    <h4 class="text-lg title_text font-bold mb-4">Horarios</h4>
+                    <ul class="space-y-2 content_text text-gray-400">
                         <li class="flex justify-between"><span>Lunes - Viernes</span> <span>9:00 - 20:00</span></li>
                         <li class="flex justify-between"><span>Sábados</span> <span>10:00 - 14:00</span></li>
                         <li class="flex justify-between"><span>Domingos</span> <span>Cerrado</span></li>
@@ -300,20 +301,20 @@
                 
                 <!-- Columna 3: Enlaces rápidos -->
                 <div>
-                    <h4 class="text-lg font-bold mb-4">Enlaces rápidos</h4>
+                    <h4 class="text-lg title_text font-bold mb-4">Enlaces rápidos</h4>
                     <ul class="space-y-2">
-                        <li><a href="#inicio" class="text-blue-200 hover:text-white">Inicio</a></li>
-                        <li><a href="#catalogo" class="text-blue-200 hover:text-white">Catálogo en línea</a></li>
-                        <li><a href="#eventos" class="text-blue-200 hover:text-white">Eventos</a></li>
-                        <li><a href="#servicios" class="text-blue-200 hover:text-white">Servicios</a></li>
-                        <li><a href="#" class="text-blue-200 hover:text-white">Hazte socio</a></li>
+                        <li><a href="#inicio" class="content_text text-gray-400 hover:text-white">Inicio</a></li>
+                        <li><a href="#catalogo" class="content_text text-gray-400 hover:text-white">Catálogo en línea</a></li>
+                        <li><a href="#eventos" class="content_text text-gray-400 hover:text-white">Eventos</a></li>
+                        <li><a href="#servicios" class="content_text text-gray-400 hover:text-white">Servicios</a></li>
+                        <li><a href="#" class="content_text text-gray-400 hover:text-white">Hazte socio</a></li>
                     </ul>
                 </div>
                 
                 <!-- Columna 4: Contacto -->
                 <div>
-                    <h4 class="text-lg font-bold mb-4">Contacto</h4>
-                    <ul class="space-y-2 text-blue-200">
+                    <h4 class="text-lg title_text font-bold mb-4">Contacto</h4>
+                    <ul class="space-y-2 content_text text-gray-400">
                         <li class="flex items-start">
                             <i class="fas fa-map-marker-alt mt-1 mr-2"></i>
                             <span>Calle de la Lectura, 123. 28001 Madrid</span>
@@ -330,8 +331,8 @@
                 </div>
             </div>
             
-            <div class="border-t border-blue-800 mt-8 pt-8 text-center text-blue-300 text-sm">
-                <p>&copy; 2023 Biblioteca Comunitaria. Todos los derechos reservados. | <a href="#" class="hover:text-white">Política de privacidad</a> | <a href="#" class="hover:text-white">Términos de uso</a></p>
+            <div class="border-t border-purple-800 mt-8 pt-8 text-center content_text text-gray-400 text-sm">
+                <p>&copy; 2026 Bibli. Todos los derechos reservados. | <a href="#" class="hover:text-white">Política de privacidad</a> | <a href="#" class="hover:text-white">Términos de uso</a></p>
                 <p class="mt-2">Imágenes de <a href="https://unsplash.com" class="hover:text-white" target="_blank">Unsplash</a></p>
             </div>
         </div>
