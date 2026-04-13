@@ -3,7 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\View;  
+use Illuminate\Support\Facades\View;
 use App\Models\Libro;
 use App\Models\Prestamo;
 use App\Models\User;
@@ -23,7 +23,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
- 
-        
+
+        if (config('app.env' === 'production')) {
+            URL::forceScheme('https');
+        }
     }
 }
