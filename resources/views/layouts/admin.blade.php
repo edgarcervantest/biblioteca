@@ -132,9 +132,7 @@
                                 <span class="font-medium">Salir</span>
                             </a>
                         </li>
-                    </ul>
-
-               
+</ul>
 
                 </nav>
             </aside>

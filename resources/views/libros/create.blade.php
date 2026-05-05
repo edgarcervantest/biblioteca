@@ -29,7 +29,7 @@
             </nav>
             <h2 class="title_text">Agregar libro</h2>
         </div>
-        
+
         @if (session('success'))
             <div class="bg-green-100 border border-green-400 250 text-green-700 px-4 py-3 font-bold rounded-md mb-4">
                 {{ session('success') }}
@@ -40,32 +40,23 @@
             @csrf
             <div class="mb-4">
                 <label for="nombre" class="block content_text font-bold mb-2">Nombre del libro:</label>
-                <input type="text" id="nombre" name="nombre"
-                    class="w-full px-4 py-2 input_text"
-                    required>
+                <input type="text" id="nombre" name="nombre" class="w-full px-4 py-2 input_text" required>
             </div>
             <div class="mb-4">
                 <label for="isbn" class="block content_text font-bold mb-2">ISBN:</label>
-                <input type="text" id="isbn" name="isbn"
-                    class="w-full px-4 py-2 input_text"
-                    required>
+                <input type="text" id="isbn" name="isbn" class="w-full px-4 py-2 input_text" required>
             </div>
             <div class="mb-4">
                 <label for="autor" class="block content_text font-bold mb-2">Autor:</label>
-                <input type="text" id="autor" name="autor"
-                    class="w-full px-4 py-2 input_text"
-                    required>
+                <input type="text" id="autor" name="autor" class="w-full px-4 py-2 input_text" required>
             </div>
             <div class="mb-4">
                 <label for="editorial" class="block content_text font-bold mb-2">Editorial:</label>
-                <input type="text" id="editorial" name="editorial"
-                    class="w-full px-4 py-2 input_text"
-                    required>
+                <input type="text" id="editorial" name="editorial" class="w-full px-4 py-2 input_text" required>
             </div>
             <div class="mb-4">
                 <label for="categoria" class="block content_text font-bold mb-2">Categoría:</label>
-                <select name="categoria"
-                    class="w-full px-4 py-2 input_text grey_card">
+                <select name="categoria" class="w-full px-4 py-2 input_text grey_card">
                     @foreach($categorias as $categoria)
                         <option value="{{ $categoria->id }}">{{ $categoria->nombre }}</option>
                     @endforeach
@@ -74,10 +65,8 @@
             </div>
 
             <div class="flex items-center justify-between">
-                <button type="submit"
-                    class="purple_button">Guardar</button>
-                <a href="{{ route('libros.index') }}"
-                    class="action_button">Cancelar</a>
+                <button type="submit" class="purple_button">Guardar</button>
+                <a href="{{ route('libros.index') }}" class="action_button">Cancelar</a>
             </div>
         </form>
     </div>
