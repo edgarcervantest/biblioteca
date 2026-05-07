@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Mail\UsuarioRegistrado;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Auth;
 
 
 class AuthController extends Controller
@@ -37,7 +41,10 @@ class AuthController extends Controller
         ]);
 
         #Redirigir o iniciar sesion automaticamente
-        auth()->login($user);
+        Auth::login($user);
+
+        Mail::to($user->email)->send(new UsuarioRegistrado($user));
+
         return redirect()->route('home');
     }
 
@@ -50,7 +57,7 @@ class AuthController extends Controller
     ]);
 
     #Intentar iniciar sesion
-    if(auth()->attempt($credentials)){
+    if(Auth::attempt($credentials)){
         return redirect()->route('home');
     }
 
@@ -59,8 +66,8 @@ class AuthController extends Controller
     ]);
     }
 
-    public function logout(){
-        auth()->logout();
+    public function logout(Request $request) {
+        Auth::logout();
         return redirect()->route('login');
     }
 }
