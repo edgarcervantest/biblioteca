@@ -68,7 +68,7 @@
                                             <i class="fas fa-lock"></i>
                                         </div>
                                         <input type="password" id="loginPassword" name="password" required
-                                            class="w-full pl-12 pr-12 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300"
+                                            class="w-full pl-12 pr-4 py-3 input_text"
                                             placeholder="Ingresa tu contraseña">
                                         <button type="button"
                                             class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700 focus:outline-none"
@@ -161,7 +161,7 @@
                                             <i class="fas fa-user"></i>
                                         </div>
                                         <input type="text" id="name" name="name" required
-                                            class="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300"
+                                            class="w-full pl-12 pr-4 py-3 input_text"
                                             placeholder="Tu nombre">
                                     </div>
                                 </div>
@@ -176,7 +176,7 @@
                                             <i class="fas fa-envelope"></i>
                                         </div>
                                         <input type="email" id="email" name="email" required
-                                            class="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300"
+                                            class="w-full pl-12 pr-4 py-3 input_text"
                                             placeholder="tucorreo@ejemplo.com">
                                     </div>
                                     <p class="text-sm text-gray-500 mt-2">Usaremos este correo para contactarte y para
@@ -193,7 +193,7 @@
                                             <i class="fas fa-lock"></i>
                                         </div>
                                         <input type="password" id="password" name="password" required
-                                            class="w-full pl-12 pr-12 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300"
+                                            class="w-full pl-12 pr-4 py-3 input_text"
                                             placeholder="Crea una contraseña segura">
                                         <button type="button"
                                             class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700 focus:outline-none"
@@ -235,7 +235,7 @@
                                         </div>
                                         <input type="password" id="password_confirmation" name="password_confirmation"
                                             required
-                                            class="w-full pl-12 pr-12 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300"
+                                            class="w-full pl-12 pr-4 py-3 input_text"
                                             placeholder="Repite tu contraseña">
                                         <button type="button"
                                             class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700 focus:outline-none"
