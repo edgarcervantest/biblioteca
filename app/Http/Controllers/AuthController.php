@@ -43,7 +43,7 @@ class AuthController extends Controller
         #Redirigir o iniciar sesion automaticamente
         Auth::login($user);
 
-        Mail::to($user->email)->send(new UsuarioRegistrado($user));
+        Mail::to($user->email)->queue(new UsuarioRegistrado($user));
 
         return redirect()->route('home');
     }
